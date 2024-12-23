@@ -169,14 +169,47 @@ To deploy the example to gh-pages site
 npm run deploy
 ```
 
-## About UNICEF
+## How it works
+
+The `src` directory contains the main source code for the React Organizational Chart component. Here's a brief overview of its contents:
+
+1. chart: This directory contains the core logic for rendering the organizational chart using D3.js.
+  - components: Contains reusable components like iconLink and supervisorIcon.
+  - config.js: Defines default configuration settings for the chart.
+  - exportOrgChartImage.js: Handles exporting the chart as an image.
+  - exportOrgChartPdf.js: Handles exporting the chart as a PDF.
+  - index.js: Initializes the chart with the provided configuration.
+  - onClick.js: Handles click events on the chart nodes.
+  - onParentClick.js: Handles click events for loading parent nodes.
+  - render.js: Main rendering logic for the chart.
+  - renderLines.js: Renders the lines connecting the nodes.
+2. defs: Contains definitions for SVG elements like box shadows and avatar clips.
+  - defineAvatarClip.js: Defines a clip path for avatars.
+  - defineBoxShadow.js: Defines a box shadow filter.
+  - defineBorderRadius.js: Defines a border radius for nodes.
+3. react: Contains the React component for the organizational chart.
+  - org-chart.js: Defines the OrgChart React component which initializes the chart using the D3.js logic.
+4. utils: Contains utility functions used throughout the chart.
+  - collapse.js: Collapses nodes in the chart.
+  - covertImageToBase64.js: Converts images to base64 format.
+  - helpers.js: Helper functions for text and cursor handling.
+  - index.js: Exports all utility functions.
+  - wrapText.js: Handles text wrapping for SVG text elements.
+5. vendor: Contains vendor-specific code.
+  - base.js: Requires D3.js.
+  - example.js: Requires D3.js, Faker, React, and ReactDOM.
+6. index.js: The entry point that exports the OrgChart component and initializes the chart.
+
+Each part of the `src` directory works together to create a high-performance, interactive organizational chart component using React and D3.js.
+
+# About UNICEF
 
 [UNICEF](https://www.unicef.org/) works in over 190 countries and territories to protect the rights of every child. UNICEF has spent more than 70 years working to improve the lives of children and their families. In UNICEF, we **believe all children have a right to survive, thrive and fulfill their potential – to the benefit of a better world**.
 
 [Donate](https://donate.unicef.org/donate/now)
 
 
-## Collaborations and support
+# Collaborations and support
 
 Just fork the project and make a pull request. You may also [consider donating](https://donate.unicef.org/donate/now).
 
