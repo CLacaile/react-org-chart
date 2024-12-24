@@ -4,15 +4,14 @@ const { resolve } = require('path')
 module.exports = {
   name: '@unicef/react-org-chart',
   devtool: 'source-map',
-  entry: './src/index.js',
   output: {
     filename: 'index.js',
-    devtoolLineToLine: true,
     sourceMapFilename: './index.js.map',
     pathinfo: true,
-    path: resolve(__dirname, 'dist'),
-    library: '@unicef/react-org-chart',
-    libraryTarget: 'commonjs2',
+    library: {
+      name: '@unicef/react-org-chart',
+      type: 'umd',
+    }
   },
   module: {
     rules: [
